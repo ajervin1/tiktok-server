@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 // Get Trending Posts
 app.get('/trending', async (req, res) => {
 	const { collector: posts, headers } = await TikTokScraper.trend('', {
-		number: 8,
+		number: 200,
 		download: false,
 		sessionList: [ session_id ]
 	})
@@ -39,7 +39,7 @@ app.get('/users/:username', async (req, res) => {
 	try {
 		const post = await TikTokScraper.user(username, {
 			download: false,
-			number: 8,
+			number: 200,
 			sessionList: [ session_id ],
 			
 		})
@@ -56,7 +56,7 @@ app.get('/hashtag/:hashtag', async (req, res) => {
 	const { hashtag } = req.params
 	const post = await TikTokScraper.hashtag(hashtag, {
 		download: false,
-		number: 8,
+		number: 200,
 		sessionList: [ session_id ],
 	})
 	// Set Headers
@@ -68,7 +68,7 @@ app.get('/songs/:songid', async (req, res) => {
 	const { songid } = req.params
 	const post = await TikTokScraper.music(songid, {
 		download: false,
-		number: 8,
+		number: 200,
 		sessionList: [ session_id ],
 	})
 	// Set Headers
