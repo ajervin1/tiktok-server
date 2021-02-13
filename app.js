@@ -12,7 +12,7 @@ const TikTokScraper = require('tiktok-scraper')
 app.use(cors())
 app.use(morgan('dev'))
 const fs = require('fs')
-const session_id = 'sid_tt=601a98c8eeea0111d6cde18e509e1ab6'
+const session_id = 'sid_tt=d884553c00e4286c9313ffeb0d1b8049'
 app.use(express.json())
 
 app.use(express.static('./'))
@@ -38,7 +38,7 @@ app.get('/users/:username', async (req, res) => {
 	
 	const post = await TikTokScraper.user(username, {
 		download: false,
-		number: 300,
+		number: 200,
 		sessionList: [ session_id ],
 	})
 	res.send({ posts: post.collector, headers: post.headers })
