@@ -80,6 +80,6 @@ app.get('/download', (req, res) => {
 const port = process.env.PORT || 4000
 
 // Server Started
-app.listen(4000, () => {
+app.listen(port, () => {
 	console.log('server started')
 })
