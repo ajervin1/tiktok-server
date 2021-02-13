@@ -38,7 +38,7 @@ app.get('/users/:username', async (req, res) => {
 	
 	const post = await TikTokScraper.user(username, {
 		download: false,
-		number: 30,
+		number: 300,
 		sessionList: [ session_id ],
 	})
 	res.send({ posts: post.collector, headers: post.headers })
@@ -80,6 +80,6 @@ app.get('/download', (req, res) => {
 const port = process.env.PORT || 4000
 
 // Server Started
-app.listen(port, () => {
+app.listen(4000, () => {
 	console.log('server started')
 })
