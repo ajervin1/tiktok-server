@@ -31,21 +31,6 @@ async function downloadVideo (videoUrl, cookie) {
 }
 
 
-async function downloadTikTok (videoUrl, cookie) {
-	if (!fs.existsSync('videos')) {
-		fs.mkdirSync('videos')
-	}
-	const res = await axios.get(videoUrl, {
-		responseType: 'arraybuffer',
-		headers: { cookie, referer: 'https://www.tiktok.com/' }
-	})
-	const buffer = Buffer.from(res.data)
-	const id = uuidv4()
-	const filename = `./videos/v-${ id }.mp4`
-	const ws = fs.writeFileSync(filename, buffer)
-	return 'downloaded video'
-	
-}
 
 
 
@@ -65,4 +50,4 @@ async function zipVideoFiles () {
 }
 
 
-module.exports = { downloadVideo, downloadTikTok, zipVideoFiles }
+module.exports = { downloadVideo, zipVideoFiles }

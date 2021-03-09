@@ -11,14 +11,14 @@
 	"license": "ISC",
 	"dependencies": {
 		"@types/express": "^4.17.11",
-		"archiver": "^5.2.0",
+		"archiver": "^5.3.0",
 		"axios": "^0.21.1",
 		"cors": "^2.8.5",
 		"express": "^4.17.1",
 		"fluent-ffmpeg": "^2.1.2",
 		"morgan": "^1.10.0",
 		"rimraf": "^3.0.2",
-		"tiktok-scraper": "^1.4.12",
+		"tiktok-scraper": "1.4.14",
 		"uuid": "^8.3.2"
 	}
 }

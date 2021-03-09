@@ -1,4 +1,4 @@
-const { downloadVideo, downloadTikTok, zipVideoFiles } = require('./helpers.js')
+const { downloadVideo, zipVideoFiles } = require('./helpers.js')
 // Imports
 const rimraf = require('rimraf')
 const express = require('express')
